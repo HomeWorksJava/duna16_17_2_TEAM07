@@ -13,15 +13,15 @@ public class TermekDaoImpl implements TermekDao {
 
    public TermekDaoImpl(){
       Termeks = new ArrayList<Termek>();
-      Termek Termek1 = new Termek("Robert",0);
-      Termek Termek2 = new Termek("John",1);
+      Termek Termek1 = new Termek(0,"Kalapács",1000,50);
+      Termek Termek2 = new Termek(1,"Szög",5,100000);
       Termeks.add(Termek1);
       Termeks.add(Termek2);		
    }
 
    public void deleteTermek(Termek Termek) {
-      Termeks.remove(Termek.getRollNo());
-      System.out.println("Termek: Roll No " + Termek.getRollNo() + ", deleted from database");
+      Termeks.remove(Termek.getTermekKod());
+      System.out.println("Termék: Termékkód " + Termek.getTermekKod() + ", törölve az adatbázisból");
    }
 
    //retrive list of Termeks from the database
@@ -30,12 +30,12 @@ public class TermekDaoImpl implements TermekDao {
    }
 
 
-   public Termek getTermek(int rollNo) {
-      return Termeks.get(rollNo);
+   public Termek getTermek(int getTermekKod) {
+      return Termeks.get(getTermekKod);
    }
 
    public void updateTermek(Termek Termek) {
-      Termeks.get(Termek.getRollNo()).setName(Termek.getName());
-      System.out.println("Termek: Roll No " + Termek.getRollNo() + ", updated in the database");
+      Termeks.get(Termek.getTermekKod()).setName(Termek.getName());
+      System.out.println("Termék: Termékkód " + Termek.getTermekKod() + ", frissítve az adatbázisban");
    }
 }

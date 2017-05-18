@@ -1,27 +1,55 @@
 package raktar.model;
 
 public class Termek {
+   private int termekKod;
    private String name;
-   private int rollNo;
+   private int ar;
+   private int mennyiseg;
 
-   public Termek(String name, int rollNo){
-      this.name = name;
-      this.rollNo = rollNo;
+   public Termek(int termekKod, String name, int ar, int mennyiseg){
+      this.termekKod = termekKod;
+	  this.name = name;
+	  this.ar = ar;
+	  this.mennyiseg = mennyiseg;
    }
 
-   public String getName() {
-      return name;
+   public int getTermekKod() 
+   {
+      return termekKod;
    }
 
-   public void setName(String name) {
-      this.name = name;
+   public void settermekKod(int termekKod) 
+   {
+      this.termekKod = termekKod;
+   }
+   
+   public String getName() 
+   {
+	   return name;
    }
 
-   public int getRollNo() {
-      return rollNo;
+   public void setName(String name) 
+   {
+	   this.name = name;
    }
-
-   public void setRollNo(int rollNo) {
-      this.rollNo = rollNo;
+   
+   public int getAr()
+   {
+	   return ar;
+   }
+   
+   public void setAr(int ar)
+   {
+	   this.ar=ar;
+   }
+   
+   public int getMennyiseg()
+   {
+	   return mennyiseg;
+   }
+   
+   public void setMennyiseg(int mennyiseg)
+   {
+	   this.mennyiseg = mennyiseg;
    }
 }

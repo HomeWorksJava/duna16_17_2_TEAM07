@@ -10,17 +10,17 @@ public class DaoPatternDemo {
 
 	      //print all termeks
 	      for (Termek termek : termekDao.getAllTermek()) {
-	         System.out.println("Termek: [RollNo : " + termek.getRollNo() + ", Name : " + termek.getName() + " ]");
+	         System.out.println("Termék: [Termékkód: " + termek.getTermekKod() + ", Név: " + termek.getName() + ", Ár: " + termek.getAr() + ", Mennyiség: " + termek.getMennyiseg() + " ]");
 	      }
 
 
 	      //update termek
 	      Termek termek =termekDao.getAllTermek().get(0);
-	      termek.setName("Michael");
+	      termek.setName("Kalapács");
 	      termekDao.updateTermek(termek);
 
 	      //get the termek
 	      termekDao.getTermek(0);
-	      System.out.println("Termek: [RollNo : " + termek.getRollNo() + ", Name : " + termek.getName() + " ]");		
+	      System.out.println("Termék: [Termékkód: " + termek.getTermekKod() + ", Név: " + termek.getName() + ", Ár: " + termek.getAr() + ", Mennyiség: " + termek.getMennyiseg() + " ]");		
 	   }
 	}
