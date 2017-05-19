@@ -11,9 +11,7 @@ pageEncoding="UTF-8"%>
 <br>Raktárban lévő termékek listázása
 <hr/>
 <form action="DaoPatternDemo">
-
 <input type="submit" value="Listázás"/>
-
 </form>
 </body>
 </head>
